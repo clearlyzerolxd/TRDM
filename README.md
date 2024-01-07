@@ -8,11 +8,11 @@ Deep neural networks have made great achieve- ments in rainfall prediction.Howev
 
 We will report our research methods and model structure, reasoning process, etc. in more detail here.
 
-| Model | Learning Rate |Parameter |Optimizer|Epoch|
-|---------|---------|---------|---------|---------|
-| sequence diffusion|  1e-4  |  █▌  |Adam|5000|
-| SSR| 1e-4 |   █▌ |Adam|5000|
-| LSR| 1e-4 |   █▌ |Adam|5000|
+| Model | Learning Rate |Parameter |Optimizer|Epoch|Train on GPUs|Train float precision|
+|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
+| Sequence Diffusion|  1e-4  |  ██▌ |Adam|5000|A6000(48g)*10|amp|
+| SSR| 1e-4 |   ██▌ |Adam|5000|A6000(48g)*10|amp|
+| LSR| 1e-4 |   ██▌ |Adam|5000|A6000(48g)*10|amp|
 
 
 
@@ -25,3 +25,16 @@ We will report our research methods and model structure, reasoning process, etc.
 ## Reconstruction stage
 
 <img src="readmefig/sr.png" alt="???" />
+
+
+# ToDo
+While the paper is under review, we will gradually begin uploading the relevant code.
+
+We recognize the crucial importance of code Open-source for the verifiability and reproducibility of research. Therefore, we have decided to progressively showcase our research work to the academic community during the review process, allowing for a more comprehensive understanding of our methods and experimental results. We hope that this step will foster broader collaboration and discussions, contributing to the advancement of the academic field.
+
+- [ ] Sequence Diffusion model
+- [ ] Reconstruction stage - SSR
+- [ ] Reconstruction stage - LSR
+- [ ] Trainloader of Prediction and Reconstruction stage
+- [ ] Complete sampling process
+- [ ] some training tricks
