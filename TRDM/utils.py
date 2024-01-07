@@ -1,5 +1,4 @@
 import os
-
 import imageio
 from matplotlib import pyplot as plt
 import cv2
@@ -25,10 +24,7 @@ def plot_images(images):
 
 
 class Get_tager_sample_h5npy(Dataset):
-    def __init__(self,path):
-        
-   
-        
+    def __init__(self,path):        
         with open(path, 'r') as validation_file:
             self.name = [line.strip() for line in validation_file.readlines()]
 
@@ -255,7 +251,6 @@ class Get_tager_sample(Dataset):
         img_name = self.path[idx]
         img_f = os.path.join("/media/ps/data/all_png",img_name)
         f = []
-
         for i in range(16):
             x = cv2.imread(os.path.join(img_f,str(i)+".jpg"))
             f.append(x)
