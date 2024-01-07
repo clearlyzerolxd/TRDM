@@ -8,6 +8,14 @@ Deep neural networks have made great achieve- ments in rainfall prediction.Howev
 
 We will report our research methods and model structure, reasoning process, etc. in more detail here.
 
+| Model | Learning Rate |Parameter |Optimizer|Epoch|
+|---------|---------|---------|---------|---------|
+| sequence diffusion|  1e-4  |  ???  |Adam|5000|
+| SSR| 1e-4 |  ???  |Adam|5000|
+| LSR| 1e-4 |  ???  |Adam|5000|
+
+
+
 ## Prediction stage
 
 
