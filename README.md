@@ -5,7 +5,12 @@ Deep neural networks have made great achieve- ments in rainfall prediction.Howev
 <img src="readmefig/basic.png" alt="Alt text" />
 
 # Our proposed method consists of two processes (models)
+
+We will report our research methods and model structure, reasoning process, etc. in more detail here.
+
 ## Prediction stage
+
+
 
 <img src="readmefig/Unet_3d.png" alt="Alt text" />
 
