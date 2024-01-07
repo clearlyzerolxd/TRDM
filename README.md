@@ -28,9 +28,7 @@ We will report our research methods and model structure, reasoning process, etc.
 
 
 # ToDo
-While the paper is under review, we will gradually begin uploading the relevant code.
 
-We recognize the crucial importance of code Open-source for the verifiability and reproducibility of research. Therefore, we have decided to progressively showcase our research work to the academic community during the review process, allowing for a more comprehensive understanding of our methods and experimental results. We hope that this step will foster broader collaboration and discussions, contributing to the advancement of the academic field.
 
 - [ ] Sequence Diffusion model
 - [ ] Reconstruction stage - SSR
