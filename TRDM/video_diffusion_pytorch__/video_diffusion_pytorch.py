@@ -506,31 +506,10 @@ class Unet3D(nn.Module):
         r = x.clone()
 
         t = self.time_mlp(time) if exists(self.time_mlp) else None
-        image_keep_mask = prob_mask_like((x.shape[0],), 0.2, device=x.device)
-
+        
         if exists(image_embed):
-            # print(image_embed.shape)
-
             image_hiddens = self.to_image_hiddens(image_embed)
-            image_keep_mask_hidden = rearrange(image_keep_mask, 'b -> b 1')
-            null_image_hiddens = self.null_image_hiddens.to(image_hiddens.dtype)
-            
-            image_hiddens = torch.where(
-                image_keep_mask_hidden,
-                image_hiddens,
-                null_image_hiddens
-            )
-
-            # t = t + image_hiddens
             t = t+image_hiddens
-        # classifier free guidance
-
-        if self.has_cond:
-            batch, device = x.shape[0], x.device
-            mask = prob_mask_like((batch,), null_cond_prob, device = device)
-            cond = torch.where(rearrange(mask, 'b -> b 1'), self.null_cond_emb, cond)
-            t = torch.cat((t, cond), dim = -1)
-
         h = []
 
         for block1, block2, spatial_attn, temporal_attn, downsample in self.downs:
